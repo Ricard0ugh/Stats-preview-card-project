@@ -14,6 +14,11 @@
     --lexa: "Lexend Deca", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: var(--navy950);
     margin: 0;
@@ -27,7 +32,7 @@ body {
 
 #card-box {
     display: flex;
-    max-width: 700px;
+    max-width: 860px;
     background-color: var(--blue950);
     border-radius: 12px;
     overflow: hidden;
@@ -35,7 +40,18 @@ body {
 
 .info-card, .image-box
 {
-    width: 50%;
+    flex: 1;
+}
+
+.image-box {
+    position: relative;
+}
+
+.image-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsla(277, 79%, 41%, 0.4);
 }
 
 .image-box img {
@@ -45,6 +61,58 @@ body {
     object-fit: cover;
 }
 
+.info-card {
+    padding: 3.5rem 4rem 3.5rem;
+}
+
+.info-card h2 {
+    color: var(--white);
+    font-family: var(--inter);
+    font-weight: 700;
+    margin-top: .5rem;
+    max-width: 18ch;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+span {
+    color: var(--purple500);
+}
+
+p {
+    color: var(--white-paragraph);
+    font-family: var(--lexa);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 3.2rem;
+    max-width: 40ch;
+}
+
+#stats-box ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stat-value {
+    color: var(--white);
+    font-family: var(--lexa);
+    font-weight: 400;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.stats {
+    color: var(--white-stat-headings);
+    font-family: var(--lexa);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
 /*
 - Font size: 15px
 
