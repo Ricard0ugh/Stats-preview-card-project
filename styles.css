@@ -113,6 +113,38 @@ p {
     letter-spacing: 1px;
     font-size: 10px;
 }
+
+@media (max-width: 375px) {
+    #card-box {
+        flex-direction: column;
+    }
+
+    .image-box {
+        order: -1; /* puts image on top */
+    }
+
+    .info-card {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .info-card h2 {
+        max-width: 100%;
+        font-size: 1.8rem;
+    }
+
+    p {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #stats-box ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+
 /*
 - Font size: 15px
 
